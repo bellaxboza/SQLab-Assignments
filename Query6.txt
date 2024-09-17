@@ -1,0 +1,9 @@
+SELECT c.customerName AS customerName
+    , c.customerNumber AS customerNumber
+    , SUM(p.amount) AS total_payment_amount
+FROM customers c
+JOIN payments p
+ON c.customerNumber = p.customerNumber
+GROUP BY c.customerName, c.customerNumber
+ORDER BY total_payment_amount DESC
+LIMIT 10
