@@ -1,0 +1,5 @@
+SELECT state
+  AVG(creditLimit) AS average_credit_limit
+FROM customers
+WHERE country = USA
+GROUP BY state
