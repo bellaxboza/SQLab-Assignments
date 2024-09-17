@@ -1,0 +1,6 @@
+SELECT customerName
+    , state
+    , country
+FROM customers
+WHERE country <> USA 
+    AND customerName LIKE '%Collect%'
