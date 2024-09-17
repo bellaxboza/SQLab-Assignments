@@ -1,0 +1,8 @@
+SELECT contactFirstName
+  , contactLastName
+  , phone
+  , addressLine1
+  , creditLimt
+FROM customers
+WHERE state = CA
+  AND creditLimit > 25000.00
