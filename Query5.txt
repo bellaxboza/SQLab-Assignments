@@ -1,0 +1,6 @@
+SELECT c.customerName
+    , o.orderNumber
+    , o.status
+FROM customer c
+JOIN orders o
+ON c.customerNumber = o.customerNumber
