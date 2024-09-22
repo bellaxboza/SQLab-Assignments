@@ -1,0 +1,10 @@
+SELECT e.employeeNumber
+    , e.firstName
+    , e.lastName
+    , COUNT(DISTINCT c.customerNumber) AS numberofCustomers
+FROM employees e
+JOIN customers c ON e.employeeNumber = c.salesRepEmployeeNumber
+GROUP BY e.employeeNumber
+    , e.firstName
+    , e.lastName
+HAVING AVG(c.creditLimit) > 15000;
